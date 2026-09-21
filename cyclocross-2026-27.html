@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite European cyclocross, 2026-27</title>
+<meta name="description" content="Race dates, where to watch in the US, and Cyclocross24 links for the 2026-27 elite European cyclocross season.">
+<style>
+:root{
+  --bg:#F2F5F3; --panel:#FFFFFF; --ink:#17211D; --muted:#55635C; --line:#D4DBD7; --link:#1B5E9E; --tape:#E4B21B;
+  --flo:#2F6DB5; --flo-tint:#E3EDF8; --hbo:#B9800A; --hbo-tint:#FBF0D2; --nav:#17211D; --navink:#F2F5F3;
+  box-sizing:border-box;
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101815; --panel:#16201C; --ink:#E7EEEA; --muted:#A3B1AA; --line:#2A3833; --link:#8DB9E8;
+    --flo:#6FA6E6; --flo-tint:#1A2A3D; --hbo:#E2AE3A; --hbo-tint:#32290F; --nav:#0B110F; --navink:#E7EEEA;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101815; --panel:#16201C; --ink:#E7EEEA; --muted:#A3B1AA; --line:#2A3833; --link:#8DB9E8;
+  --flo:#6FA6E6; --flo-tint:#1A2A3D; --hbo:#E2AE3A; --hbo-tint:#32290F; --nav:#0B110F; --navink:#E7EEEA;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Avenir Next","Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;font-variant-numeric:tabular-nums}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--tape);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{padding:40px 0 24px}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.05;margin:0 0 10px;letter-spacing:-.02em;font-weight:800}
+.lede{max-width:60ch;color:var(--muted);margin:0}
+nav.sections{position:sticky;top:0;z-index:5;background:var(--nav);color:var(--navink);border-bottom:4px solid var(--tape)}
+nav.sections .wrap{display:flex;gap:4px;flex-wrap:wrap;align-items:center;padding-top:6px;padding-bottom:6px}
+nav.sections a{color:var(--navink);text-decoration:none;padding:8px 12px;border-radius:6px;font-weight:600;font-size:.95rem}
+nav.sections a:hover{background:rgba(255,255,255,.12)}
+nav.sections .sp{flex:1}
+section.block{padding:36px 0 8px}
+h2{font-size:1.7rem;margin:0 0 6px;letter-spacing:-.01em}
+h3{font-size:1.05rem;margin:0}
+.sub{color:var(--muted);margin:0 0 18px;max-width:70ch}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 22px}
+.tools .lab{color:var(--muted);font-size:.9rem;margin-right:4px}
+.filter{border:2px solid var(--line);background:var(--panel);color:var(--ink);padding:6px 14px;border-radius:999px;font:inherit;font-size:.92rem;font-weight:600;cursor:pointer}
+.filter[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.filter.flo::before,.filter.hbo::before{content:"";display:inline-block;width:.7em;height:.7em;border-radius:50%;margin-right:.5em;background:var(--flo)}
+.filter.hbo::before{background:var(--hbo)}
+.week{display:grid;grid-template-columns:130px 1fr;gap:0 18px;margin:0 0 44px}
+.week h3{position:sticky;top:64px;align-self:start;padding-top:10px;border-top:4px solid var(--ink);font-size:1rem;font-weight:800}
+.week ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.race{display:grid;grid-template-columns:118px minmax(0,1.4fr) minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:8px 14px;align-items:start;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--flo);border-radius:4px}
+.race.hbo{border-left-color:var(--hbo)}
+.race.flo{background:linear-gradient(0deg,var(--flo-tint),var(--flo-tint))}
+.race.hbo{background:linear-gradient(0deg,var(--hbo-tint),var(--hbo-tint))}
+.race.past{opacity:.55}
+.day{font-weight:800;display:block}
+.next[hidden]{display:none}
+.next{display:inline-block;margin-top:3px;background:var(--tape);color:#17211D;font-weight:800;font-size:.78rem;padding:1px 8px;border-radius:999px}
+.name{font-weight:700;display:block}
+.meta{color:var(--muted);font-size:.86rem;display:block}
+.times span{display:block;font-size:.92rem}
+.times b{font-weight:600;color:var(--muted);display:inline-block;min-width:4.6em}
+.times span{white-space:nowrap}
+.chip{display:inline-block;font-weight:800;font-size:.85rem;padding:1px 10px;border-radius:999px;background:var(--flo);color:#fff}
+.chip.hbo{background:var(--hbo);color:#17211D}
+:root:not([data-theme="light"]) .chip.flo{color:#0B1620}
+.cx a{font-size:.9rem}
+.hide{display:none!important}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.people h3{border-top:4px solid var(--ink);padding-top:10px;margin-bottom:8px}
+.people ul{list-style:none;margin:0;padding:0;columns:1}
+.people li{padding:5px 0;border-bottom:1px solid var(--line)}
+dl.links{margin:8px 0 24px;display:grid;gap:0}
+dl.links>div{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:4px 20px;padding:8px 0;border-bottom:1px solid var(--line)}
+dl.links dt{font-weight:700} dl.links dd{margin:0;color:var(--muted)}
+#resources h3{margin-top:22px;border-top:4px solid var(--ink);padding-top:10px}
+.notes p,.notes li{max-width:75ch}
+.notes ul{padding-left:1.1em}
+footer{padding:32px 0 60px;color:var(--muted);font-size:.9rem}
+.totop{float:right}
+@media (max-width:860px){
+  nav.sections .wrap{flex-wrap:nowrap;overflow-x:auto;padding-left:8px;padding-right:8px}
+  nav.sections a{white-space:nowrap}
+  nav.sections .sp{display:none}
+  .week{grid-template-columns:1fr}
+  .week h3{position:static;margin-bottom:8px}
+  .race{grid-template-columns:1fr 1fr}
+  .race .what{grid-column:1/-1;order:-1}
+  dl.links>div{grid-template-columns:1fr}
+}
+@media (max-width:480px){.race{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<nav class="sections" aria-label="Sections">
+  <div class="wrap">
+    <a href="#schedule">Schedule</a>
+    <a href="#men">Men</a>
+    <a href="#women">Women</a>
+    <a href="#resources">Resources</a>
+    <a href="#notes">Notes</a>
+    <span class="sp"></span>
+    <a href="#next" id="jump" hidden>Next race</a>
+  </div>
+</nav>
+
+<header class="top"><div class="wrap">
+  <h1>Elite European cyclocross, 2026-27</h1>
+  <p class="lede">Race dates, where to watch in the US, and links to Cyclocross24 for every round of the World Cup, Superprestige, X2O Trofee and HG Cross, plus the World Championships. Compiled September 21, 2026.</p>
+</div></header>
+
+<main class="wrap">
+<section class="block" id="schedule" aria-labelledby="h-schedule">
+  <h2 id="h-schedule">Schedule</h2>
+  <p class="sub">Grouped by week, Monday to Sunday. TBA means the start time is not published yet. Europe returns to standard time on Oct 25, one week before the US, so the Eastern gap is 5 hours until Nov 1 and 6 hours after.</p>
+  <div class="tools" role="group" aria-label="Filter by US stream">
+    <span class="lab">Show</span>
+    <button class="filter" type="button" data-f="all" aria-pressed="true">All races</button>
+    <button class="filter flo" type="button" data-f="flo" aria-pressed="false">FloBikes: World Cup, Worlds</button>
+    <button class="filter hbo" type="button" data-f="hbo" aria-pressed="false">HBO Max: Superprestige, X2O, HG Cross</button>
+  </div>
+  <div id="weeks">
+<section class="week" aria-labelledby="w1005">
+<h3 id="w1005">Oct 5 to Oct 11</h3>
+<ul>
+<li class="race hbo" data-date="2026-10-11" data-stream="hbo">
+  <div class="when"><span class="day">Sun Oct 11</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Dendermonde</span><span class="meta">HG Cross, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/dendermonde/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1012">
+<h3 id="w1012">Oct 12 to Oct 18</h3>
+<ul>
+<li class="race hbo" data-date="2026-10-17" data-stream="hbo">
+  <div class="when"><span class="day">Sat Oct 17</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Berencross, Meulebeke</span><span class="meta">HG Cross, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/hg-cross/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1019">
+<h3 id="w1019">Oct 19 to Oct 25</h3>
+<ul>
+<li class="race hbo" data-date="2026-10-24" data-stream="hbo">
+  <div class="when"><span class="day">Sat Oct 24</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Heerderstrand</span><span class="meta">HG Cross, Netherlands</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/hg-cross/">Cyclocross24: series page</a></div>
+</li>
+<li class="race hbo" data-date="2026-10-25" data-stream="hbo">
+  <div class="when"><span class="day">Sun Oct 25</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Overijse (season opener)</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> 13:50</span><span><b>Eastern</b> 8:50 a.m.</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/overijse/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1026">
+<h3 id="w1026">Oct 26 to Nov 1</h3>
+<ul>
+<li class="race hbo" data-date="2026-11-01" data-stream="hbo">
+  <div class="when"><span class="day">Sun Nov 1</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Koppenbergcross, Oudenaarde</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/oudenaarde/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1102">
+<h3 id="w1102">Nov 2 to Nov 8</h3>
+<ul>
+<li class="race hbo" data-date="2026-11-05" data-stream="hbo">
+  <div class="when"><span class="day">Thu Nov 5</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Middelkerke (evening Halloween race)</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/middelkerke/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1109">
+<h3 id="w1109">Nov 9 to Nov 15</h3>
+<ul>
+<li class="race hbo" data-date="2026-11-11" data-stream="hbo">
+  <div class="when"><span class="day">Wed Nov 11</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Niel</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/superprestige/">Cyclocross24: series page</a></div>
+</li>
+<li class="race hbo" data-date="2026-11-14" data-stream="hbo">
+  <div class="when"><span class="day">Sat Nov 14</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Merksplas</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/superprestige/">Cyclocross24: series page</a></div>
+</li>
+<li class="race hbo" data-date="2026-11-15" data-stream="hbo">
+  <div class="when"><span class="day">Sun Nov 15</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Bollekescross, Hamme-Zogge</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/x2o-trofee/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1116">
+<h3 id="w1116">Nov 16 to Nov 22</h3>
+<ul>
+<li class="race hbo" data-date="2026-11-21" data-stream="hbo">
+  <div class="when"><span class="day">Sat Nov 21</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Rapencross, Lokeren</span><span class="meta">HG Cross, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/18546/">Cyclocross24: race page</a></div>
+</li>
+<li class="race hbo" data-date="2026-11-22" data-stream="hbo">
+  <div class="when"><span class="day">Sun Nov 22</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">be-Mine cross, Beringen</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/x2o-trofee/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1123">
+<h3 id="w1123">Nov 23 to Nov 29</h3>
+<ul>
+<li class="race flo" data-date="2026-11-27" data-stream="flo">
+  <div class="when"><span class="day">Fri Nov 27</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Ostrava (night race)</span><span class="meta">World Cup #1, Czechia</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+<li class="race flo" data-date="2026-11-29" data-stream="flo">
+  <div class="when"><span class="day">Sun Nov 29</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Tabor</span><span class="meta">World Cup #2, Czechia</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/tabor/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1130">
+<h3 id="w1130">Nov 30 to Dec 6</h3>
+<ul>
+<li class="race hbo" data-date="2026-12-06" data-stream="hbo">
+  <div class="when"><span class="day">Sun Dec 6</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Ruddervoorde</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/superprestige/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1207">
+<h3 id="w1207">Dec 7 to Dec 13</h3>
+<ul>
+<li class="race flo" data-date="2026-12-13" data-stream="flo">
+  <div class="when"><span class="day">Sun Dec 13</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Glasgow (Kelvingrove Park)</span><span class="meta">World Cup #3, Scotland</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1214">
+<h3 id="w1214">Dec 14 to Dec 20</h3>
+<ul>
+<li class="race hbo" data-date="2026-12-17" data-stream="hbo">
+  <div class="when"><span class="day">Thu Dec 17</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Zilvermeercross, Mol</span><span class="meta">HG Cross, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/mol/">Cyclocross24: race page</a></div>
+</li>
+<li class="race flo" data-date="2026-12-19" data-stream="flo">
+  <div class="when"><span class="day">Sat Dec 19</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Antwerpen</span><span class="meta">World Cup #4, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+<li class="race flo" data-date="2026-12-20" data-stream="flo">
+  <div class="when"><span class="day">Sun Dec 20</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Koksijde</span><span class="meta">World Cup #5, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/koksijde/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1221">
+<h3 id="w1221">Dec 21 to Dec 27</h3>
+<ul>
+<li class="race hbo" data-date="2026-12-22" data-stream="hbo">
+  <div class="when"><span class="day">Tue Dec 22</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Plage cross, Hofstade</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/x2o-trofee/">Cyclocross24: series page</a></div>
+</li>
+<li class="race hbo" data-date="2026-12-23" data-stream="hbo">
+  <div class="when"><span class="day">Wed Dec 23</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Azencross, Loenhout</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/loenhout/">Cyclocross24: race page</a></div>
+</li>
+<li class="race hbo" data-date="2026-12-25" data-stream="hbo">
+  <div class="when"><span class="day">Fri Dec 25</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Heusden-Zolder (Christmas Day race)</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/superprestige/">Cyclocross24: series page</a></div>
+</li>
+<li class="race flo" data-date="2026-12-26" data-stream="flo">
+  <div class="when"><span class="day">Sat Dec 26</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Gavere</span><span class="meta">World Cup #6, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/gavere/">Cyclocross24: race page</a></div>
+</li>
+<li class="race flo" data-date="2026-12-27" data-stream="flo">
+  <div class="when"><span class="day">Sun Dec 27</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Namur</span><span class="meta">World Cup #7, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/namur/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w1228">
+<h3 id="w1228">Dec 28 to Jan 3</h3>
+<ul>
+<li class="race flo" data-date="2026-12-29" data-stream="flo">
+  <div class="when"><span class="day">Tue Dec 29</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Besancon</span><span class="meta">World Cup #8, France</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+<li class="race hbo" data-date="2026-12-30" data-stream="hbo">
+  <div class="when"><span class="day">Wed Dec 30</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Diegem (evening race)</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/diegem/">Cyclocross24: race page</a></div>
+</li>
+<li class="race hbo" data-date="2027-01-01" data-stream="hbo">
+  <div class="when"><span class="day">Fri Jan 1</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">GP Sven Nys, Baal</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/baal/">Cyclocross24: race page</a></div>
+</li>
+<li class="race hbo" data-date="2027-01-02" data-stream="hbo">
+  <div class="when"><span class="day">Sat Jan 2</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Gullegem (series finale)</span><span class="meta">Superprestige, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/gullegem/">Cyclocross24: race page</a></div>
+</li>
+<li class="race flo" data-date="2027-01-03" data-stream="flo">
+  <div class="when"><span class="day">Sun Jan 3</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Zonhoven</span><span class="meta">World Cup #9, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/zonhoven/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w0111">
+<h3 id="w0111">Jan 11 to Jan 17</h3>
+<ul>
+<li class="race flo" data-date="2027-01-17" data-stream="flo">
+  <div class="when"><span class="day">Sun Jan 17</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Benidorm</span><span class="meta">World Cup #10, Spain</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w0118">
+<h3 id="w0118">Jan 18 to Jan 24</h3>
+<ul>
+<li class="race flo" data-date="2027-01-23" data-stream="flo">
+  <div class="when"><span class="day">Sat Jan 23</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Hamme</span><span class="meta">World Cup #11, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+<li class="race flo" data-date="2027-01-24" data-stream="flo">
+  <div class="when"><span class="day">Sun Jan 24</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Hoogerheide</span><span class="meta">World Cup #12, Netherlands</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely, not every round</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/standings/uci-world-cup/">Cyclocross24: series page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w0125">
+<h3 id="w0125">Jan 25 to Jan 31</h3>
+<ul>
+<li class="race flo" data-date="2027-01-29" data-stream="flo">
+  <div class="when"><span class="day">Fri Jan 29 to 31</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Ostend (Jan 29 to 31; elite races expected Jan 30 and 31)</span><span class="meta">World Championships, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip flo">FloBikes</span><span class="meta">likely</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/calendar/">Cyclocross24: calendar page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w0201">
+<h3 id="w0201">Feb 1 to Feb 7</h3>
+<ul>
+<li class="race hbo" data-date="2027-02-03" data-stream="hbo">
+  <div class="when"><span class="day">Wed Feb 3</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Parkcross, Maldegem</span><span class="meta">HG Cross, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/maldegem/">Cyclocross24: race page</a></div>
+</li>
+<li class="race hbo" data-date="2027-02-07" data-stream="hbo">
+  <div class="when"><span class="day">Sun Feb 7</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Krawatencross, Lille</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/lille/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+<section class="week" aria-labelledby="w0208">
+<h3 id="w0208">Feb 8 to Feb 14</h3>
+<ul>
+<li class="race hbo" data-date="2027-02-13" data-stream="hbo">
+  <div class="when"><span class="day">Sat Feb 13</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Waaslandcross, Sint-Niklaas</span><span class="meta">HG Cross, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/sint-niklaas/">Cyclocross24: race page</a></div>
+</li>
+<li class="race hbo" data-date="2027-02-14" data-stream="hbo">
+  <div class="when"><span class="day">Sun Feb 14</span><span class="next" hidden>Next up</span></div>
+  <div class="what"><span class="name">Brussels Universities Cyclocross</span><span class="meta">X2O Trofee, Belgium</span></div>
+  <div class="times"><span><b>Local</b> TBA</span><span><b>Eastern</b> TBA</span></div>
+  <div class="watch"><span class="chip hbo">HBO Max</span><span class="meta">likely, select rounds</span></div>
+  <div class="cx"><a href="https://cyclocross24.com/race/brussels/">Cyclocross24: race page</a></div>
+</li>
+</ul></section>
+  </div>
+</section>
+
+<section class="block" id="riders" aria-labelledby="h-riders">
+  <h2 id="h-riders">Elite riders on Cyclocross24</h2>
+  <p class="sub">Riders who appeared in the elite results I found for 2023-24 through 2025-26. This is not a 2026-27 start list, and some have moved to road, so check the start list on each race page. Links follow Cyclocross24's address pattern; I confirmed four by search (Lucinda Brand, Mathieu van der Poel, Célia Gery, Zoe Bäckstedt) and built the rest without opening them, so a few may not resolve. <a href="https://cyclocross24.com/rider/">Riders index</a>.</p>
+  <div class="people">
+    <div id="men"><h3>Elite men</h3><ul>
+<li><a href="https://cyclocross24.com/rider/mathieu-van-der-poel/">Mathieu van der Poel</a></li>
+<li><a href="https://cyclocross24.com/rider/wout-van-aert/">Wout van Aert</a></li>
+<li><a href="https://cyclocross24.com/rider/thibau-nys/">Thibau Nys</a></li>
+<li><a href="https://cyclocross24.com/rider/niels-vandeputte/">Niels Vandeputte</a></li>
+<li><a href="https://cyclocross24.com/rider/michael-vanthourenhout/">Michael Vanthourenhout</a></li>
+<li><a href="https://cyclocross24.com/rider/joris-nieuwenhuis/">Joris Nieuwenhuis</a></li>
+<li><a href="https://cyclocross24.com/rider/laurens-sweeck/">Laurens Sweeck</a></li>
+<li><a href="https://cyclocross24.com/rider/tibor-del-grosso/">Tibor Del Grosso</a></li>
+<li><a href="https://cyclocross24.com/rider/pim-ronhaar/">Pim Ronhaar</a></li>
+<li><a href="https://cyclocross24.com/rider/eli-iserbyt/">Eli Iserbyt</a></li>
+<li><a href="https://cyclocross24.com/rider/toon-aerts/">Toon Aerts</a></li>
+<li><a href="https://cyclocross24.com/rider/cameron-mason/">Cameron Mason</a></li>
+<li><a href="https://cyclocross24.com/rider/felipe-orts-lloret/">Felipe Orts Lloret</a></li>
+<li><a href="https://cyclocross24.com/rider/emiel-verstrynge/">Emiel Verstrynge</a></li>
+<li><a href="https://cyclocross24.com/rider/joran-wyseure/">Joran Wyseure</a></li>
+<li><a href="https://cyclocross24.com/rider/lars-van-der-haar/">Lars van der Haar</a></li>
+<li><a href="https://cyclocross24.com/rider/gerben-kuypers/">Gerben Kuypers</a></li>
+<li><a href="https://cyclocross24.com/rider/tom-meeusen/">Tom Meeusen</a></li>
+<li><a href="https://cyclocross24.com/rider/mees-hendrikx/">Mees Hendrikx</a></li>
+<li><a href="https://cyclocross24.com/rider/toon-vandebosch/">Toon Vandebosch</a></li>
+<li><a href="https://cyclocross24.com/rider/ward-huybs/">Ward Huybs</a></li>
+<li><a href="https://cyclocross24.com/rider/victor-van-de-putte/">Victor Van de Putte</a></li>
+<li><a href="https://cyclocross24.com/rider/david-menut/">David Menut</a></li>
+<li><a href="https://cyclocross24.com/rider/dario-lillo/">Dario Lillo</a></li>
+<li><a href="https://cyclocross24.com/rider/michael-boros/">Michael Boroš</a></li>
+    </ul></div>
+    <div id="women"><h3>Elite women</h3><ul>
+<li><a href="https://cyclocross24.com/rider/lucinda-brand/">Lucinda Brand</a></li>
+<li><a href="https://cyclocross24.com/rider/fem-van-empel/">Fem van Empel</a></li>
+<li><a href="https://cyclocross24.com/rider/puck-pieterse/">Puck Pieterse</a></li>
+<li><a href="https://cyclocross24.com/rider/ceylin-del-carmen-alvarado/">Ceylin del Carmen Alvarado</a></li>
+<li><a href="https://cyclocross24.com/rider/inge-van-der-heijden/">Inge van der Heijden</a></li>
+<li><a href="https://cyclocross24.com/rider/marie-schreiber/">Marie Schreiber</a></li>
+<li><a href="https://cyclocross24.com/rider/amandine-fouquenet/">Amandine Fouquenet</a></li>
+<li><a href="https://cyclocross24.com/rider/sara-casasola/">Sara Casasola</a></li>
+<li><a href="https://cyclocross24.com/rider/aniek-van-alphen/">Aniek van Alphen</a></li>
+<li><a href="https://cyclocross24.com/rider/manon-bakker/">Manon Bakker</a></li>
+<li><a href="https://cyclocross24.com/rider/marion-norbert-riberolle/">Marion Norbert Riberolle</a></li>
+<li><a href="https://cyclocross24.com/rider/leonie-bentveld/">Leonie Bentveld</a></li>
+<li><a href="https://cyclocross24.com/rider/shirin-van-anrooij/">Shirin van Anrooij</a></li>
+<li><a href="https://cyclocross24.com/rider/celia-gery/">Célia Gery</a></li>
+<li><a href="https://cyclocross24.com/rider/zoe-backstedt/">Zoe Bäckstedt</a></li>
+<li><a href="https://cyclocross24.com/rider/helene-clauzel/">Hélène Clauzel</a></li>
+<li><a href="https://cyclocross24.com/rider/kristyna-zemanova/">Kristýna Zemanová</a></li>
+<li><a href="https://cyclocross24.com/rider/denise-betsema/">Denise Betsema</a></li>
+<li><a href="https://cyclocross24.com/rider/alicia-franck/">Alicia Franck</a></li>
+<li><a href="https://cyclocross24.com/rider/laura-verdonschot/">Laura Verdonschot</a></li>
+<li><a href="https://cyclocross24.com/rider/julie-brouwers/">Julie Brouwers</a></li>
+<li><a href="https://cyclocross24.com/rider/rafaelle-carrier/">Rafaelle Carrier</a></li>
+<li><a href="https://cyclocross24.com/rider/sanne-laurijssen/">Sanne Laurijssen</a></li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="block" id="resources" aria-labelledby="h-res">
+  <h2 id="h-res">Resources</h2>
+  <p class="sub">Links gathered while researching this schedule. I have not opened every one since compiling them. Several sites are in Dutch, and some Flanders Classics content needs a free login.</p>
+<h3>Race info, start times and results</h3>
+<dl class="links">
+<div><dt><a href="https://cyclocross24.com">Cyclocross24</a></dt><dd>Race pages with local start time and TV info, start lists, results, standings.</dd></div>
+<div><dt><a href="https://cyclocross24.com/calendar/">Cyclocross24 calendar</a></dt><dd>UCI cyclocross calendar for 2026-27.</dd></div>
+<div><dt><a href="https://cyclocross24.com/rider/">Cyclocross24 riders index</a></dt><dd>Rider search and profiles for men and women.</dd></div>
+<div><dt><a href="https://www.ucicyclocrossworldcup.com/en">UCI Cyclo-cross World Cup</a></dt><dd>Official World Cup calendar, news, tickets. Some content needs a free Flanders Classics login.</dd></div>
+<div><dt><a href="https://www.flandersclassics.be/en/categories/cyclo-cross">Flanders Classics cyclo-cross</a></dt><dd>World Cup and Superprestige calendars from the organizer.</dd></div>
+<div><dt><a href="https://www.superprestigecyclocross.be/en">Telenet Superprestige</a></dt><dd>Official Superprestige calendar, results and classifications.</dd></div>
+<div><dt><a href="https://x2otrofee.be/">X2O Badkamers Trofee</a></dt><dd>Official X2O calendar, results and tickets.</dd></div>
+<div><dt><a href="https://hgcross.be/">HG Cross (formerly Exact Cross)</a></dt><dd>Official calendar and race descriptions for the seven HG Cross rounds.</dd></div>
+<div><dt><a href="https://koppenbergcross.be/">Koppenbergcross</a></dt><dd>X2O opener on Nov 1. One example of an individual race site.</dd></div>
+<div><dt><a href="https://www.waaslandcross.be">Waaslandcross</a></dt><dd>HG Cross finale in Sint-Niklaas, Feb 13.</dd></div>
+</dl>
+<h3>Season calendars</h3>
+<dl class="links">
+<div><dt><a href="https://cyclinguptodate.com/cyclocross-calendar">Cycling UpToDate cyclocross calendar</a></dt><dd>World Cup, Superprestige, X2O and HG Cross races in one list.</dd></div>
+<div><dt><a href="https://www.indeleiderstrui.nl/veldritkalender">In de Leiderstrui veldritkalender</a></dt><dd>Dutch-language calendar of series and championship races.</dd></div>
+<div><dt><a href="https://veldritkalender.nl/Home/">Veldritkalender.nl</a></dt><dd>Dutch-language 2026-27 calendar by date.</dd></div>
+<div><dt><a href="https://nl.wikipedia.org/wiki/Veldrijden_in_het_seizoen_2026-2027">Wikipedia: 2026-27 season (Dutch)</a></dt><dd>Season overview in Dutch.</dd></div>
+<div><dt><a href="https://en.wikipedia.org/wiki/2027_UCI_Cyclo-cross_World_Championships">Wikipedia: 2027 World Championships</a></dt><dd>Ostend, Jan 29 to 31. Check for the timetable as it is published.</dd></div>
+</dl>
+<h3>Where to watch</h3>
+<dl class="links">
+<div><dt><a href="https://www.flobikes.com">FloBikes</a></dt><dd>Expected US home for the World Cup and World Championships.</dd></div>
+<div><dt><a href="https://www.hbomax.com">HBO Max</a></dt><dd>Expected US home for select Superprestige, X2O and HG Cross rounds. Needs Standard plan or higher.</dd></div>
+<div><dt><a href="https://rijden.uk/blog/cyclocross-on-tv/">Rijden: Cyclocross on TV 2026-27</a></dt><dd>Broadcaster guide for the 2026-27 season (UK-based, covers Sporza, TNT Sports, HBO Max).</dd></div>
+<div><dt><a href="https://www.cyclingnews.com/cycling-culture/streaming/how-to-watch-2026-pro-cycling-in-the-us-a-streaming-guide-for-global-races/">Cyclingnews: US streaming guide</a></dt><dd>Which US service holds which cycling rights.</dd></div>
+<div><dt><a href="https://www.ridecx.com/blogs/learn/how-to-stream-cyclocross-during-the-2025-26-season">RideCX: how to stream cyclocross</a></dt><dd>US streaming breakdown. Written for 2025-26, so check for updates.</dd></div>
+</dl>
+<h3>News and reading</h3>
+<dl class="links">
+<div><dt><a href="https://www.cyclingnews.com/cyclo-cross/">Cyclingnews cyclo-cross</a></dt><dd>English-language news, results and previews.</dd></div>
+<div><dt><a href="https://cyclingflash.com">CyclingFlash</a></dt><dd>Cycling news site that covered the 2026-27 Superprestige calendar.</dd></div>
+<div><dt><a href="https://www.veldritkrant.be">Veldritkrant</a></dt><dd>Flemish cyclocross news and calendar announcements.</dd></div>
+</dl>
+
+</section>
+
+<section class="block notes" id="notes" aria-labelledby="h-notes">
+  <h2 id="h-notes">Notes and caveats</h2>
+  <ul>
+    <li><b>US streaming is expected, not confirmed per race.</b> FloBikes carried the UCI World Cup and the 2026 World Championships in the US, but did not show every World Cup round in 2025-26. HBO Max (Standard plan or higher, $18.49 a month in 2025-26) showed a number of Superprestige, X2O Trofee and Exact Cross (now HG Cross) races in 2025-26. I found no 2026-27 US announcement, so check the FloBikes schedule and HBO Max listings before each race. The UCI YouTube World Cup stream is sometimes available in the US.</li>
+    <li><b>Start times.</b> Only Overijse (Oct 25) has one: 13:50 local, from its Cyclocross24 page, which does not say which category. The Eastern time is my conversion.</li>
+    <li><b>Cyclocross24 links.</b> "Race page" opens that race. Where I could not confirm a race page, the link opens the series page that lists every round. Race pages show the latest edition on file, so some may still show 2025-26 dates until the new edition is added (Loenhout showed Dec 29, 2025 when I looked).</li>
+    <li><b>Left out.</b> European Championships (no 2026 date found), national championships, and US races. FloBikes event pages for Exact Cross Kortrijk (Dec 13) and X2O Loenhout (Dec 29) conflict with organizer calendars, which list Loenhout on Dec 23 and no Kortrijk round.</li>
+    <li><b>Sources.</b> Cyclingnews (World Cup calendar, US streaming guide), Flanders Classics and CyclingFlash (Superprestige), x2otrofee.be and Veldritkrant (X2O Trofee), hgcross.be (HG Cross), ProCyclingUK and RideCX (2025-26 US coverage), and Cyclocross24 (race pages and Overijse time).</li>
+  </ul>
+</section>
+</main>
+
+<footer><div class="wrap"><a class="totop" href="#top">Back to top</a>Dates come from organizer and press announcements and may change.</div></footer>
+
+<script>
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.race'));
+  var today=new Date(); today.setHours(0,0,0,0);
+  var next=null;
+  rows.forEach(function(r){
+    var p=r.dataset.date.split('-'); var d=new Date(+p[0],+p[1]-1,+p[2]);
+    if(d<today){r.classList.add('past')}
+    else if(!next){next=r}
+  });
+  if(next){
+    next.id='next'; next.querySelector('.next').hidden=false;
+    var j=document.getElementById('jump'); j.hidden=false;
+  }
+  var btns=[].slice.call(document.querySelectorAll('.filter'));
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      var f=b.dataset.f;
+      rows.forEach(function(r){r.classList.toggle('hide',f!=='all'&&r.dataset.stream!==f)});
+      [].forEach.call(document.querySelectorAll('.week'),function(w){
+        var any=w.querySelector('.race:not(.hide)');
+        w.classList.toggle('hide',!any);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
